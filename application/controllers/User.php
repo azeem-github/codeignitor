@@ -5,6 +5,8 @@ class User extends CI_Controller
    public function __construct()
    {
       if(isset($_SESSION['user_logged'])){
+
+         $this->session->set_flashdata("error", "please login First")
          redirect("auth/login");
       }
    }

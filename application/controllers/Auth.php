@@ -4,7 +4,7 @@ class Auth extends CI_Controller
 {
    public function login()
    {
-      $this->form_validation->set_rules('email', 'Email', 'required');
+      $this->form_validation->set_rules('username', 'Username', 'required');
       $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
       if($this->form_validation->run() == TRUE) {
 
@@ -14,7 +14,7 @@ class Auth extends CI_Controller
 
          $this->db->select('*');
          $this->db->from('users');
-         $this->db->where(array('username'=>$username, 'password' => $password));
+         $this->db->where(array('email'=>$email, 'password' => $password));
          $query = $this->db->get();
 
          $user = $query->row();
