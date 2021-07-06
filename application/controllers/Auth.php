@@ -4,12 +4,13 @@ class Auth extends CI_Controller
 {
    public function login()
    {
-      $this->form_validation->set_rules('username', 'Username', 'required');
+      $this->form_validation->set_rules('email', 'Email', 'required');
       $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
       if($this->form_validation->run() == TRUE) {
+         //check user in database
 
 
-         $username = $_POST['username'];
+         $email = $_POST['email'];
          $password= md5($_POST['password']);
 
          $this->db->select('*');
@@ -18,14 +19,16 @@ class Auth extends CI_Controller
          $query = $this->db->get();
 
          $user = $query->row();
-
+      //if user exists
          if($user->email) {
-
+            
+            //temporary message
             $this->session->set_flashdata("success", "you are logged in");
 
             $_SESSION['user_logged'] = TRUE;
             $_SESSION['username'] = $user->username;
 
+            //redirect to profile
             redirect("user/profile", "refresh");
 
          } else{
@@ -35,19 +38,28 @@ class Auth extends CI_Controller
       }
     $this->load->view('login');
    }
+
+
+
+
+
+
+
+
+
    public function register()
    {
       if(isset($_POST['register'])){
          $this->form_validation->set_rules('username', 'Username', 'required');
          $this->form_validation->set_rules('email', 'Email', 'required');
          $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
-      if($this->form_validation->run() == TRUE ){
+      if($this->form_validation->run() == TRUE){
 
          echo "form validated";
          $data = array(
             'username'=>$_POST ['username'],
             'email'=>$_POST ['email'],
-            'password'=>md5($_POST ['password']),
+            'password'=>md5($_POST ['password'])
          );
          $this->db->insert('users', $data);
          $this->session->set_flashdata("success", "Your account has been registered. You can Login now");
