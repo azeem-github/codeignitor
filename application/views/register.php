@@ -15,15 +15,12 @@
     <link href="<?php echo base_url(); ?>assets/css/boostrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
   </head>
   <body>
-  <div class="col-lg-5 col-lg-offset-1">
+  <div class="col-lg-8 col-lg-offset-2">
     <h1>Register Page:</h1>
 
     <p>Fill In The details to register on our website</p>
@@ -32,10 +29,10 @@
     <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
     <?php } 
     ?>
-    <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
+    <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
    <form action="" method="POST">
     
-    <div class="form-group">
+  <div class="form-group">
     <label for="username">Username:</label>
     <input type="form-control" name="username" id="username" type="text">
     </div>
@@ -48,7 +45,11 @@
     <label for="password">Password:</label>
     <input type="form-control" name="password" id="password" type="password">
     </div>
+    
+    <div>
     <button class="btn btn-primary" name="register">Register</button>
+    </div>
+    <form>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
