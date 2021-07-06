@@ -1,72 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-   
-    <title>Login Page!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <title>Dashbboard</title>
+</head>
+<body>
 
-    <!-- Bootstrap -->
-    <link href="<?php echo base_url(); ?>assets/css/boostrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
  <div class="container-fluid">
     <div class="navbar-header">
-  <a style="color:white" class="navbar-brand" href="product.php"> <h2></h2>Products</a>
+  <a style="color:white" class="navbar-brand" href="product.php"> <h2></h2>Admin Panel</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Categories  |
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="category.php">Categories List</a>
-          <a class="dropdown-item" href="addCategory.php">Add Categories</a>
-          
-        </div>
+    <li class="nav-item">
+        <a class="nav-link" href="profile.php">Dashboard |</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Products  |
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="product.php">Product List</a>
-          <a class="dropdown-item" href="addProduct.php">Add product</a>
-        </div>
+
+       
+      <li class="nav-item">
+        <a class="nav-link" href="profile.php">Tickets |</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="profile.php">Accounts | </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">Profile |</a>
+        <a class="nav-link" href="profile.php">Categories | </a>
       </li>
+   
       <li class="nav-item">
-        <a class="nav-link" href="logout.php">Logout</a>
+        <a class="nav-link" href="profile.php">Email Templates | </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="profile.php">Settings</a>
       </li>
     </ul>
   </div>
 </nav> 
+<br>
   <div class="col-lg-5 col-lg-offset-1">
-    <h1>Login Page:</h1>
+    <h3><b>Dashboard</b></h3>
 
-   <p>Fill to proceed to dashboard</p>
+   
     <?php if(isset($_SESSION['success'])) { ?>
     
     <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
     <?php } 
     ?>
     
-    Hello , <?php echo $_SESSION['username']; ?>
+    HELLO, <?php echo $_SESSION['username']; ?>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -76,4 +69,3 @@
     <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
   </body>
 </html>
-?>
