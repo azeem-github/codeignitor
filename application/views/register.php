@@ -20,7 +20,7 @@
 
   </head>
   <body>
-  <div class="col-lg-8 col-lg-offset-2">
+  <div class="col-lg-5 col-lg-offset-1">
     <h1>Register Page:</h1>
 
     <p>Fill In The details to register on our website</p>
@@ -30,23 +30,14 @@
     <?php } 
     ?>
     <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
-   <form action="" method="POST">
-    
-  <div class="form-group">
-    <label for="username">Username:</label>
-    <input type="form-control" name="username" id="username" type="text">
-    </div>
-    <div class="form-group">
-    <label for="Email">Email:</label>
-    <input type="form-control" name="email" id="email" type="text">
-    </div>
+    <form action="" method="POST"> 
+  <label for="Username">Username:</label><br>
+  <input type="text" name="username"><br><br>
+  <label for="Email">Email:</label><br>
+  <input type="text" name="email"><br><br>
+  <label for="Password">Password:</label><br>
+  <input type="text" name="password"><br><br>
 
-    <div class="form-group">
-    <label for="password">Password:</label>
-    <input type="form-control" name="password" id="password" type="password">
-    </div>
-    
-    <div>
     <button class="btn btn-primary" name="register">Register</button>
     </div>
     <form>

@@ -59,7 +59,7 @@
     <?php } 
     ?>
     
-    HELLO, <?php echo $_SESSION['username']; ?>
+    Hello, <?php echo $_SESSION['username']; ?>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

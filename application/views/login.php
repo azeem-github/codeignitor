@@ -59,17 +59,13 @@
     <?php } 
     ?>
     <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-   <form action="" method="POST">
-    <div class="form-group">
-    <label for="Email">Email:</label>
-    <input type="form-control" name="email" id="email" type="text">
-    </div>
-
-    <div class="form-group">
-    <label for="password">Password:</label>
-    <input type="form-control" name="password" id="password" type="password">
-    </div>
+    <form action="" method="POST"> 
+  <label for="Email">Email:</label><br>
+  <input type="text" name="email"><br><br>
+  <label for="Password">Password:</label><br>
+  <input type="text" name="password"><br><br>
     <button class="btn btn-primary" name="login"> Login</button>
+  </form>
   
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
