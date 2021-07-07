@@ -22,7 +22,7 @@
   <body>
 
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <div class="container-fluid">
+
   <div class="navbar-header">
   <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
