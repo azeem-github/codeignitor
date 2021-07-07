@@ -6,13 +6,17 @@ class User extends CI_Controller
    {
 
       parent::__construct();
-      if(!isset($_SESSION['user_logged'])) {
+      if($_SESSION['user_logged'] == FALSE) {
          $this->session->set_flashdata("error", "please login First");
          redirect("auth/login");
       }
    }
    public function profile()
    {
+      if($_SESSION['user_logged'] == FALSE) {
+         $this->session->set_flashdata("error", "please login First");
+         redirect("auth/login");
+      }
       $this->load->view('profile');
    }
 }

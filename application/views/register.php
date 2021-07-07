@@ -20,6 +20,11 @@
 
   </head>
   <body>
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <div class="navbar-header">
+  <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
+  <br>
+</nav>
   <div class="col-lg-5 col-lg-offset-1">
     <h1>Register Page:</h1>
 
@@ -32,11 +37,11 @@
     <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
     <form action="" method="POST"> 
   <label for="Username">Username:</label><br>
-  <input type="text" name="username"><br><br>
+  <input type="text" class="form-control" name="username"><br><br>
   <label for="Email">Email:</label><br>
-  <input type="text" name="email"><br><br>
+  <input type="text" class="form-control"  name="email"><br><br>
   <label for="Password">Password:</label><br>
-  <input type="text" name="password"><br><br>
+  <input type="text" class="form-control"  name="password"><br><br>
 
     <button class="btn btn-primary" name="register">Register</button>
     </div>

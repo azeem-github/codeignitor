@@ -22,30 +22,14 @@
   <body>
 
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-
+  <div class="container-fluid">
   <div class="navbar-header">
-  <a style="color:white" class="navbar-brand" href="product.php"> <h2></h2>Ticketing System</a>
+  <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Create Ticket |
-        </a>
-      </li>
-      <li>
-       <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Tickets  |
-        </a>
-</li>
-      <li class="nav-item">
-        <a class="nav-link" href="profile.php">Profile |</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login">Login</a>
-      </li>
     </ul>
   </div>
 </nav> 
@@ -61,9 +45,9 @@
     <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
     <form action="" method="POST"> 
   <label for="Email">Email:</label><br>
-  <input type="text" name="email"><br><br>
+  <input type="text" class="form-control" name="email"><br><br>
   <label for="Password">Password:</label><br>
-  <input type="text" name="password"><br><br>
+  <input type="text" class="form-control" name="password"><br><br>
     <button class="btn btn-primary" name="login"> Login</button>
   </form>
   

@@ -1,7 +1,16 @@
 <?php
 
 class Auth extends CI_Controller
+
 {
+   public function logout()
+   {
+      unset($_SESSION);
+      session_destroy();
+      redirect("auth/login","refresh");
+   }
+
+
    public function login()
    {
       $this->form_validation->set_rules('email', 'Email', 'required');
