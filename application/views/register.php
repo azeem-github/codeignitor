@@ -35,7 +35,7 @@
     <?php } 
     ?>
     <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
-    <form action="" method="POST"> 
+    <form action="login" method="POST"> 
   <label for="Username">Username:</label><br>
   <input type="text" class="form-control" name="username"><br><br>
   <label for="Email">Email:</label><br>

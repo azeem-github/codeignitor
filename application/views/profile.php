@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
     <title>Dashbboard</title>
 </head>
@@ -28,22 +29,22 @@
 
        
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">Tickets |</a>
+        <a class="nav-link" href="profile.php"><i class="fas fa-ticket-alt"></i> Tickets |</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">Accounts | </a>
+        <a class="nav-link" href="profile.php"><i class="fas fa-user-alt"></i>  Accounts |</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">Categories | </a>
+        <a class="nav-link" href="profile.php"><i class="fas fa-list-alt"></i> Categories | </a>
       </li>
    
       <li class="nav-item">
-        <a class="nav-link" href="profile.php">Email Templates | </a>
+        <a class="nav-link" href="profile.php"><i class="fa fa-envelope"></i>  Email Templates | </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo base_url(); ?>index.php/auth/logout">Logout</a>
+        <a class="nav-link" href="<?php echo base_url(); ?>index.php/auth/logout"><i class="fa fa-lock"></i> Logout</a>
       </li>
     </ul>
   </div>
@@ -59,7 +60,9 @@
     <?php } 
     ?>
     
-    Hello, <?php echo $_SESSION['username']; ?>
+    Hello, <?php echo $_SESSION['username']; ?> !
+
+
 
     <br><br>
 
