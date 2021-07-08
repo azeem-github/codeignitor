@@ -48,14 +48,6 @@ class Auth extends CI_Controller
     $this->load->view('login');
    }
 
-
-
-
-
-
-
-
-
    public function register()
    {
       if(isset($_POST['register'])){
@@ -72,8 +64,14 @@ class Auth extends CI_Controller
          );
          $this->db->insert('users', $data);
          $this->session->set_flashdata("success", "Your account has been registered. You can Login now");
-         redirect("auth/register", "refresh");
-      }
+         redirect("auth/login", "refresh");
+
+         
+       }
+      //else{
+      //    $this->session->set_flashdata("error", "no such account in database");
+      //    redirect("auth/register", "refresh") ;
+      // }
    }
 $this->load->view('register');
    }
