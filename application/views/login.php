@@ -50,6 +50,8 @@
   <input type="text" class="form-control" name="password"><br><br>
     <button class="btn btn-primary" name="login"> Login</button>
   </form>
+  <br>
+  <p>Not Registered Yet..?<a href="register">  Registration</a></p>
   
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

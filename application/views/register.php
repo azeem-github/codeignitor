@@ -43,7 +43,10 @@
   <label for="Password">Password:</label><br>
   <input type="text" class="form-control"  name="password"><br><br>
 
-    <button class="btn btn-primary" name="register">Register</button>
+  <button class="btn btn-primary" name="register"> Register</button>
+  </form>
+  <br>
+  <p>Already Have An Account..? <a href="login">  Login</a></p>
     </div>
     <form>
     </div>

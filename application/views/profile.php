@@ -27,13 +27,12 @@
         <a class="nav-link" href="profile.php">Dashboard |</a>
       </li>
 
-       
       <li class="nav-item">
         <a class="nav-link" href="profile.php"><i class="fas fa-ticket-alt"></i> Tickets |</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="profile.php"><i class="fas fa-user-alt"></i>  Accounts |</a>
+        <a class="nav-link" href=""><i class="fas fa-user-alt"></i>  Accounts |</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="profile.php"><i class="fas fa-list-alt"></i> Categories | </a>
