@@ -32,7 +32,7 @@ class Auth extends CI_Controller
          if($user->email) {
             
             //temporary message
-            $this->session->set_flashdata("success", "you are logged in");
+            $this->session->set_flashdata("success", "You are logged in");
 
             $_SESSION['user_logged'] = TRUE;
             $_SESSION['username'] = $user->username;
@@ -41,7 +41,7 @@ class Auth extends CI_Controller
             redirect("user/profile", "refresh");
 
          } else{
-            $this->session->set_flashdata("error", "no such account in database");
+            $this->session->set_flashdata("error", "No such account in database");
             redirect("auth/login", "refresh") ;
          }
       }

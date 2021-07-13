@@ -19,6 +19,15 @@ class User extends CI_Controller
       }
       $this->load->view('profile');
    }
+
+   public function tickets()
+   {
+      if($_SESSION['user_logged'] == FALSE){
+         $this->session->set_flashdata("error", "Please check the tickets");
+         redirect("auth/tickets");
+      }
+      $this->load->view('tickets');
+   }
 }
 
 ?> 

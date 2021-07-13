@@ -56,6 +56,8 @@ body {
 </style>
 </head>
 
+<button 
+
   <div class="sidenav">
   <div class="collapse navbar-collapse">
   <a style="color:white"> <h3>Admin Panel</h3></a>
