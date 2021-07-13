@@ -12,44 +12,89 @@
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
     <title>Dashbboard</title>
 </head>
-<body>
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
- <div class="container-fluid">
-    <div class="navbar-header">
-  <a style="color:white" class="navbar-brand" href="product.php"> <h2></h2>Admin Panel</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  overflow-x: hidden;
+  transition: 0.5s;
+  background-color: #111;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 15px 15px 70px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+ 
+}
+
+.sidenav a:hover {
+  color: white;
+}
+
+.main {
+  margin-left: 20px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 20px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 20px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+
+  <div class="sidenav">
+  <div class="collapse navbar-collapse">
+  <a style="color:white"> <h3>Admin Panel</h3></a>
+  <br>
+  <br>
     <ul class="navbar-nav">
-    <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-speedmeter-alt"></i>Dashboard |</a>
+    
+  <li class="nav-item">
+        <a class="nav-link" href=""><i class="fa fa-tachometer-alt"></i> Dashboard </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="profile.php"><i class="fas fa-ticket-alt"></i> Tickets |</a>
+        <a class="nav-link" href="profile.php"><i class="fas fa-ticket-alt"></i>  Tickets </a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href=""><i class="fas fa-user-alt"></i>  Accounts |</a>
+        <a class="nav-link" href=""><i class="fas fa-user-alt"></i>   Accounts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="profile.php"><i class="fas fa-list-alt"></i> Categories | </a>
+        <a class="nav-link" href="profile.php"><i class="fas fa-list-alt"></i>   Categories </a>
       </li>
    
       <li class="nav-item">
-        <a class="nav-link" href="profile.php"><i class="fa fa-envelope"></i>  Email Templates | </a>
+        <a class="nav-link" href="profile.php"><i class="fa fa-envelope"></i> Email Templates </a>
       </li>
-
+      
       <li class="nav-item">
+        <a class="nav-link" href="profile.php"><i class="fa fa-tools"></i> Settings </a>
+      </li>
+<br>
         <a class="nav-link" href="<?php echo base_url(); ?>index.php/auth/logout"><i class="fa fa-lock"></i> Logout</a>
       </li>
     </ul>
   </div>
-</nav> 
+</div>
+</div>
+
 <br>
-  <div class="col-lg-5 col-lg-offset-1">
+  <div class="col-lg-5 col-lg-offset-2">
     <h3><b>Dashboard</b></h3>
 
    
@@ -85,7 +130,7 @@
     <thead class="thead-dark">
       <tr>
         <th> Title</th>
-        <th>E-mail</th>
+        <th>Email</th>
       </tr>
     </thead>
     <tbody>
