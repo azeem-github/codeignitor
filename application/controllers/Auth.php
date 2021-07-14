@@ -3,6 +3,16 @@
 class Auth extends CI_Controller
 
 {
+   public function index(){
+
+$this->load->model('queries');
+$checUserExist = $this->queries->checUserExist();
+echo $checUserExist;
+exit()
+$this->load->view( 'register',['checUserExist'=>$checUserExist]);
+
+   }
+
    public function logout()
    {
       unset($_SESSION);
@@ -14,7 +24,7 @@ class Auth extends CI_Controller
    public function login()
    {
       $this->form_validation->set_rules('email', 'Email', 'required');
-      $this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
+      $this->form_validation->set_rules('password', 'Password', 'required|min_length[20]');
       if($this->form_validation->run() == TRUE) {
          //check user in database
 
@@ -68,6 +78,7 @@ class Auth extends CI_Controller
 
          
        }
+       
       //else{
       //    $this->session->set_flashdata("error", "no such account in database");
       //    redirect("auth/register", "refresh") ;

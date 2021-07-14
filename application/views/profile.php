@@ -144,8 +144,8 @@ body {
     <td><?php echo $data['username'];?></td>
     <td><?php echo $data['email'];?></td>
     <td>
-    <button onclick="location.href='<?php echo base_url();?>register/index'">View</button>
-    <button onclick="location.href='<?php echo base_url();?>register/index'">Edit</button>
+    <button onclick="location.href='<?php echo base_url();?>auth/view'">View</button>
+    <button onclick="location.href='<?php echo base_url();?>auth/edit'">Edit</button>
 </td>
     </tr>
 

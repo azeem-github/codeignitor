@@ -55,9 +55,6 @@ body {
 }
 </style>
 </head>
-
-<button 
-
   <div class="sidenav">
   <div class="collapse navbar-collapse">
   <a style="color:white"> <h3>Admin Panel</h3></a>
@@ -131,9 +128,16 @@ body {
   <table class="table table-hover table-bordered">
     <thead class="thead-dark">
       <tr>
+      
         <th> Title</th>
         <th>Email</th>
+        <th> Category</th>
+        <th> Priority</th>
+        <th> Status</th>
+        <th> Msgs</th>
+        <th> Date</th>
         <th> Action</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -145,6 +149,11 @@ body {
    
     <td><?php echo $data['username'];?></td>
     <td><?php echo $data['email'];?></td>
+    <td><?php echo $data['category'];?></td>
+    <td><?php echo $data['priority'];?></td>
+    <td><?php echo $data['status'];?></td>
+    <td><?php echo $data['msgs'];?></td>
+    <td><?php echo $data['date'];?></td>
     <td>
     <button onclick="location.href='<?php echo base_url();?>register/index'">View</button>
     <button onclick="location.href='<?php echo base_url();?>register/index'">Edit</button>
