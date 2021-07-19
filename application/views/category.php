@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-    <title>Dashbboard</title>
+    <title>Ticket</title>
 </head>
 
 <style>
@@ -55,7 +55,6 @@ body {
 }
 </style>
 </head>
-
   <div class="sidenav">
   <div class="collapse navbar-collapse">
   <a style="color:white"> <h3>Admin Panel</h3></a>
@@ -72,17 +71,15 @@ body {
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="accounts"><i class="fas fa-users"></i>   Accounts </a>
+        <a class="nav-link" href="accounts"><i class="fas fa-users"></i>   Accounts</a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link" href="category"><i class="fas fa-list-alt"></i>   Categories </a>
+        <a class="nav-link" href="category.php"><i class="fas fa-list-alt"></i>   Categories </a>
       </li>
    
       <li class="nav-item">
         <a class="nav-link" href="emails.php"><i class="fa fa-envelope"></i> Email Templates </a>
       </li>
-
       
       <li class="nav-item">
         <a class="nav-link" href="settings.php"><i class="fa fa-tools"></i> Settings </a>
@@ -96,20 +93,15 @@ body {
 </div>
 
 <br>
-  <div class="col-lg-5 col-lg-offset-2">
-    <h3><b>Dashboard</b></h3>
+  <div class="col-lg-1 col-lg-offset-2">
+    <h3><b>Category</b></h3>
 
-   
-    <?php if(isset($_SESSION['success'])) { ?>
-    
-    <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-    <?php } 
-    ?>
-    
-    Hello, <?php echo $_SESSION['username']; ?> !
-<br><br>
+   <hr>
 
-  <title>Profile</title>
+<button class="btn btn-primary"> Create Category </button> 
+<br> <br>
+
+  <title>Categories</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -125,15 +117,16 @@ body {
 
 ?>
 
-
 <div class="container">
   <table class="table-dark">
   <table class="table table-hover table-bordered">
     <thead class="thead-dark">
       <tr>
-        <th> Title</th>
-        <th>Email</th>
-        <th> Action</th>
+      
+        <th> #</th>
+        <th>Name</th>
+       
+        
       </tr>
     </thead>
     <tbody>
@@ -142,13 +135,9 @@ body {
     {
     ?>
     <tr>
-   
+    <td><?php echo $data['id'];?></td>
     <td><?php echo $data['username'];?></td>
-    <td><?php echo $data['email'];?></td>
-    <td>
-    <button onclick="location.href='<?php echo base_url();?>auth/view'">View</button>
-    <button onclick="location.href='<?php echo base_url();?>auth/edit'">Edit</button>
-</td>
+   
     </tr>
 
     

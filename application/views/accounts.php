@@ -71,7 +71,7 @@ body {
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="accounts.php"><i class="fas fa-users"></i>   Accounts</a>
+        <a class="nav-link" href="accounts"><i class="fas fa-users"></i>   Accounts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="category.php"><i class="fas fa-list-alt"></i>   Categories </a>
@@ -94,15 +94,11 @@ body {
 
 <br>
   <div class="col-lg-5 col-lg-offset-2">
-    <h3><b>Tickets</b></h3>
+    <h3><b>Accounts</b></h3>
 
    <hr>
 
-<button class="btn btn-primary"> Create Ticket </button>
-<button class="btn btn-primary"> View Open Ticket </button>
-<button class="btn btn-primary"> View Closed Ticket </button>
-<button class="btn btn-primary"> View Resolved Ticket </button>
-
+<button class="btn btn-primary"> Create Account </button> 
 <br> <br>
 
   <title>Profile</title>
@@ -128,14 +124,12 @@ body {
     <thead class="thead-dark">
       <tr>
       
-        <th> Title</th>
+        <th> #</th>
+        <th>Name</th>
         <th>Email</th>
-        <th> Category</th>
-        <th> Priority</th>
-        <th> Status</th>
-        <th> Msgs</th>
-        <th> Date</th>
+        <th> Role</th>
         <th> Action</th>
+       
         
       </tr>
     </thead>
@@ -145,16 +139,13 @@ body {
     {
     ?>
     <tr>
-   
+    <td><?php echo $data['id'];?></td>
     <td><?php echo $data['username'];?></td>
     <td><?php echo $data['email'];?></td>
-    <td><?php echo $data['category'];?></td>
-    <td><?php echo $data['priority'];?></td>
-    <td><?php echo $data['status'];?></td>
-    <td><?php echo $data['msgs'];?></td>
-    <td><?php echo $data['date'];?></td>
+    <td><?php echo $data['Role'];?></td>
+   
+ 
     <td>
-    <button onclick="location.href='<?php echo base_url();?>register/index'">View</button>
     <button onclick="location.href='<?php echo base_url();?>register/index'">Edit</button>
 </td>
     </tr>
