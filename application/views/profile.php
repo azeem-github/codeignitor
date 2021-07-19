@@ -72,7 +72,7 @@ body {
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="accounts.php"><i class="fas fa-users"></i>   Accounts</a>
+        <a class="nav-link" href="accounts"><i class="fas fa-users"></i>   Accounts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="category.php"><i class="fas fa-list-alt"></i>   Categories </a>
