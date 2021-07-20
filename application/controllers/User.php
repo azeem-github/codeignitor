@@ -29,8 +29,6 @@ class User extends CI_Controller
       $this->load->view('tickets');
    }
 
-
-
 public function accounts()
 {
    if($_SESSION['user_logged'] == FALSE){
@@ -48,6 +46,13 @@ public function category()
    }
    $this->load->view('category');
 }
-
+public function create()
+{
+   if($_SESSION['user_logged'] == FALSE){
+      $this->session->set_flashdata("error", "Please check the tickets");
+      redirect("auth/create");
+   }
+   $this->load->view('create');
+}
 }
 ?> 

@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-    <title>Ticket</title>
+    <title>Ticket | Project</title>
 </head>
 
 <style>
@@ -74,7 +74,7 @@ body {
         <a class="nav-link" href="accounts"><i class="fas fa-users"></i>   Accounts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="category.php"><i class="fas fa-list-alt"></i>   Categories </a>
+        <a class="nav-link" href="category"><i class="fas fa-list-alt"></i>   Categories </a>
       </li>
    
       <li class="nav-item">
@@ -98,10 +98,10 @@ body {
 
    <hr>
 
-<button class="btn btn-primary"> Create Ticket </button>
-<button class="btn btn-primary"> View Open Ticket </button>
-<button class="btn btn-primary"> View Closed Ticket </button>
-<button class="btn btn-primary"> View Resolved Ticket </button>
+<a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/create"> Create Ticket </a>
+<a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/view"> View Open Ticket </a>
+<a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/closed"> View Closed Ticket </a>
+<a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/resolved"> View Resolved Ticket </a>
 
 <br> <br>
 

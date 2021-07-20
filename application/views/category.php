@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-    <title>Ticket</title>
+    <title>Categories | Project</title>
 </head>
 
 <style>
@@ -74,7 +74,7 @@ body {
         <a class="nav-link" href="accounts"><i class="fas fa-users"></i>   Accounts</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="category.php"><i class="fas fa-list-alt"></i>   Categories </a>
+        <a class="nav-link" href="category"><i class="fas fa-list-alt"></i>   Categories </a>
       </li>
    
       <li class="nav-item">
