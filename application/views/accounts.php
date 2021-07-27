@@ -142,7 +142,7 @@ body {
     <td><?php echo $data['id'];?></td>
     <td><?php echo $data['username'];?></td>
     <td><?php echo $data['email'];?></td>
-    <td><?php echo $data['Role'];?></td>
+    <td><?php echo $data['role'];?></td>
    
  
     <td>
