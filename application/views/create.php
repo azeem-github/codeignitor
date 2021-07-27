@@ -60,8 +60,8 @@
   <input type="comments" class="form-control"  name="msgs"><br><br>
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
-<button class="btn btn-warning" href="tickets"> Back</button>
-  <button class="btn btn-primary" name="create"> Create ticket</button>
+  <button class="btn btn-warning" <a href="tickets"></a> Back</button>
+  <button class="btn btn-success" name="create"> Create ticket</button>
   </form>
   
   <br>

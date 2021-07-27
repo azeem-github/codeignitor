@@ -117,7 +117,7 @@ body {
 <?php
  $conn = mysqli_connect('localhost', 'root', '', 'loginproject');
 
- $getusers = mysqli_query($conn, "SELECT * FROM users ORDER by id ASC");
+ $getusers = mysqli_query($conn, "SELECT * FROM tickets ORDER by id ASC");
 
 ?>
 
@@ -146,7 +146,7 @@ body {
     ?>
     <tr>
    
-    <td><?php echo $data['username'];?></td>
+    <td><?php echo $data['title'];?></td>
     <td><?php echo $data['email'];?></td>
     <td><?php echo $data['category'];?></td>
     <td><?php echo $data['priority'];?></td>
