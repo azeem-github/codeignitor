@@ -113,7 +113,7 @@ body {
 <?php
  $conn = mysqli_connect('localhost', 'root', '', 'loginproject');
 
- $getusers = mysqli_query($conn, "SELECT * FROM users ORDER by id ASC");
+ $getusers = mysqli_query($conn, "SELECT * FROM category ORDER by id ASC");
 
 ?>
 
@@ -136,7 +136,7 @@ body {
     ?>
     <tr>
     <td><?php echo $data['id'];?></td>
-    <td><?php echo $data['username'];?></td>
+    <td><?php echo $data['name'];?></td>
    
     </tr>
 

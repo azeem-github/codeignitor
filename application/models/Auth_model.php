@@ -9,7 +9,7 @@ class Auth_model extends CI_Model
    }
    public function checUserExist()
        {
-          $checUser =  $this->db->where(['user' => 'email'])
+          $checUser =  $this->db->where(['users' => 'email'])
           ->get('users');
           if($checUser->num_rows() > 0){
              return $checUser->num_rows();

@@ -149,8 +149,8 @@ body {
     <td><?php echo $data['title'];?></td>
     <td><?php echo $data['email'];?></td>
     <td><?php echo $data['category'];?></td>
-    <td><?php echo $data['priority'];?></td>
-    <td><?php echo $data['status'];?></td>
+    <td <span style="color:red";></span><?php echo $data['priority'];?></td>
+    <td <span style="color:orange";></span><?php echo $data['status'];?></td>
     <td><?php echo $data['msgs'];?></td>
     <td><?php echo $data['date'];?></td>
     <td>

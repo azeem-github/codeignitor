@@ -1,7 +1,6 @@
 <?php
 
 class Auth extends CI_Controller
-
 {
 //    public function index(){
 
@@ -107,10 +106,9 @@ $this->load->view('register');
             'status'=>$_POST ['status'],
             'msgs'=>$_POST ['msgs']);
          $this->db->insert('tickets', $data);
-         $this->session->set_flashdata("success", "Your account has been registered. You can Login now");
-         redirect("auth/tickets", "refresh");
-
-         
+         $this->session->set_flashdata("success");
+         redirect("view/tickets", "refresh");
+  
        }
        
       //else{
@@ -119,6 +117,28 @@ $this->load->view('register');
       // }
    }
 $this->load->view('create');
+   }
+
+   public function account()
+   {
+      if(isset($_POST['account'])){
+         $this->form_validation->set_rules('title', 'Title', 'required');
+         $this->form_validation->set_rules('email', 'Email', 'required');
+         $this->form_validation->set_rules('role', 'Role', 'required');
+      if($this->form_validation->run() == TRUE){
+
+         echo "form validated";
+         $data = array(
+            'name'=>$_POST ['name'],
+            'email'=>$_POST ['email'],
+            'role'=>$_POST ['role']);
+         
+         $this->db->insert('accounts', $data);
+         $this->session->set_flashdata("success", "Your account has been registered. You can Login now");
+         redirect("view/accounts", "refresh");
+  
+       }
+}
    }
 }
 ?>

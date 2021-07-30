@@ -95,6 +95,49 @@ body {
 </div>
 </div>
 
+    <!-- Dashboard counts
+    <section class="dashboard-header no-padding-bottom col-left-no-padding" style="margin-top: 4em;">
+        <div class="container">
+            <div class="row">
+                 Statistics 
+                <div class="col-md-3">
+                    <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
+                        <div><i class="fa fa-tasks"></i></div>
+                  
+                            <small>All Tickets</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
+                        <div><i class="fa fa-ticket"></i></div>
+                   
+                            <small>Open Tickets</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
+                        <div><i class="fa fa-user"></i></div>
+                      
+                            <small>Assigned Tickets</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
+                        <div><i class="fa fa-check"></i></div>
+                        
+                            <small>Closed Tickets</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
 <br>
   <div class="col-lg-5 col-lg-offset-2">
     <h3><b>Dashboard</b></h3>
@@ -109,7 +152,8 @@ body {
     Hello, <?php echo $_SESSION['username']; ?> !
 <br><br>
 
-  <title>Profile</title>
+
+<title>Profile</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -121,19 +165,28 @@ body {
 <?php
  $conn = mysqli_connect('localhost', 'root', '', 'loginproject');
 
- $getusers = mysqli_query($conn, "SELECT * FROM users ORDER by id ASC");
+ $getusers = mysqli_query($conn, "SELECT * FROM tickets ORDER by id ASC");
 
 ?>
 
+<h3> Open tickets </h3>
+<hr>
 
 <div class="container">
   <table class="table-dark">
   <table class="table table-hover table-bordered">
     <thead class="thead-dark">
       <tr>
+      
         <th> Title</th>
         <th>Email</th>
+        <th> Category</th>
+        <th> Priority</th>
+        <th> Status</th>
+        <th> Msgs</th>
+        <th> Date</th>
         <th> Action</th>
+        
       </tr>
     </thead>
     <tbody>
@@ -143,11 +196,16 @@ body {
     ?>
     <tr>
    
-    <td><?php echo $data['username'];?></td>
+    <td><?php echo $data['title'];?></td>
     <td><?php echo $data['email'];?></td>
+    <td><?php echo $data['category'];?></td>
+    <td <span style="color:red";></span><?php echo $data['priority'];?></td>
+    <td <span style="color:Orange";></span><?php echo $data['status'];?></td>
+    <td><?php echo $data['msgs'];?></td>
+    <td><?php echo $data['date'];?></td>
     <td>
-    <button onclick="location.href='<?php echo base_url();?>auth/view'">View</button>
-    <button onclick="location.href='<?php echo base_url();?>auth/edit'">Edit</button>
+    <button onclick="location.href='<?php echo base_url();?>register/index'">View</button>
+    <button onclick="location.href='<?php echo base_url();?>register/index'">Edit</button>
 </td>
     </tr>
 

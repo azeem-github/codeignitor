@@ -98,8 +98,7 @@ body {
 
    <hr>
 
-<button class="btn btn-primary"> Create Account </button> 
-<br> <br>
+   <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/create_account"> Create Account </a><br> <br>
 
   <title>Profile</title>
   <meta charset="utf-8">
@@ -113,7 +112,7 @@ body {
 <?php
  $conn = mysqli_connect('localhost', 'root', '', 'loginproject');
 
- $getusers = mysqli_query($conn, "SELECT * FROM users ORDER by id ASC");
+ $getusers = mysqli_query($conn, "SELECT * FROM accounts ORDER by id ASC");
 
 ?>
 

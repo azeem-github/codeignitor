@@ -21,8 +21,8 @@
   </head>
   <body>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <div class="navbar-header">
-  <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
+<div class="navbar-header">
+<a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
   <br>
 </nav>
   <div class="col-lg-5 col-lg-offset-1">
@@ -37,35 +37,35 @@
   
     <form action="" method="POST"> 
   <label for="Title">Title:</label><br>
-  <input type="text" class="form-control" name="title"><br>
+  <input type="text"  name="title"><br>
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
   <label for="Email">Email:</label><br>
-  <input type="text" class="form-control"  name="email"><br>
+  <input type="text"  name="email"><br>
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
   <label for="Category">Category:</label><br>
-  <input type="text" class="form-control"  name="category"><br>
+  <input type="text"   name="category"><br>
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
   <label for="Priority">Priority:</label><br>
-  <input type="text" class="form-control"  name="priority"><br>
+  <input type="text"  name="priority"><br>
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
   <label for="Status">Status:</label><br>
-  <input type="text" class="form-control"  name="status"><br>
+  <input type="text"  name="status"><br>
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
   <label for="Msgs">Msgs:</label><br>
-  <input type="comments" class="form-control"  name="msgs"><br><br>
+  <textarea class="form-group" name="msgs" rows="3"></textarea> 
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
-  <button class="btn btn-warning" <a href="tickets"></a> Back</button>
-  <button class="btn btn-success" name="create"> Create ticket</button>
+<br>
+   <button class="btn btn-warning" <a href="tickets"></a> Back</button>
+   <button class="btn btn-success" name="create"> Create Ticket</button>
   </form>
   
   <br>
- 
     </div>
     <form>
     </div>
