@@ -99,46 +99,48 @@ $this->load->view('register');
 
          echo "form validated";
          $data = array(
-            'title'=>$_POST ['title'],
-            'email'=>$_POST ['email'],
-            'category'=>$_POST ['category'],
-            'priority'=>$_POST ['priority'],
-            'status'=>$_POST ['status'],
-            'msgs'=>$_POST ['msgs']);
+            'title'=> $_POST ['title'],
+            'email'=> $_POST ['email'],
+            'category'=> $_POST ['category'],
+            'priority'=> $_POST ['priority'],
+            'status'=> $_POST ['status'],
+            'msgs'=> $_POST ['msgs']);
          $this->db->insert('tickets', $data);
          $this->session->set_flashdata("success");
-         redirect("view/tickets", "refresh");
+         redirect("auth/tickets", "refresh");
   
        }
        
-      //else{
-      //    $this->session->set_flashdata("error", "no such account in database");
-      //    redirect("auth/register", "refresh") ;
-      // }
+      
    }
 $this->load->view('create');
-   }
+}
+// public function save()
+// {
+   
+// }
 
-   public function account()
-   {
-      if(isset($_POST['account'])){
-         $this->form_validation->set_rules('title', 'Title', 'required');
-         $this->form_validation->set_rules('email', 'Email', 'required');
-         $this->form_validation->set_rules('role', 'Role', 'required');
-      if($this->form_validation->run() == TRUE){
+//    public function account()
+//    {
+//       if(isset($_POST['account'])){
+//          $this->form_validation->set_rules('title', 'Title', 'required');
+//          $this->form_validation->set_rules('email', 'Email', 'required');
+//          $this->form_validation->set_rules('role', 'Role', 'required');
+//       if($this->form_validation->run() == TRUE){
 
-         echo "form validated";
-         $data = array(
-            'name'=>$_POST ['name'],
-            'email'=>$_POST ['email'],
-            'role'=>$_POST ['role']);
+//          echo "form validated";
+//          $data = array(
+//             'name'=>$_POST ['name'],
+//             'email'=>$_POST ['email'],
+//             'role'=>$_POST ['role']);
          
-         $this->db->insert('accounts', $data);
-         $this->session->set_flashdata("success", "Your account has been registered. You can Login now");
-         redirect("view/accounts", "refresh");
+//          $this->db->insert('accounts', $data);
+//          $this->session->set_flashdata("success", "Your account has been registered. You can Login now");
+//          redirect("view/accounts", "refresh");
   
-       }
+//        }
+// }
+//    }
 }
-   }
-}
+
 ?>

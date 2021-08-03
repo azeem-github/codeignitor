@@ -20,6 +20,7 @@
 
   </head>
   <body>
+  <?php echo form_open('Auth/save', ['class'=>'form->horizontal']); ?>
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
 <div class="navbar-header">
 <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
@@ -61,13 +62,16 @@
   <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
 <br>
-   <button class="btn btn-warning" <a href="tickets"></a> Back</button>
-   <button class="btn btn-success" name="create"> Create Ticket</button>
+   <!-- <button class="btn btn-warning" <a href="tickets"></a> Back</button> -->
+   <a href="tickets"></a><?php echo form_submit(['value'=>'Cancel', 'class' => 'btn btn-warning']);?>
+   <?php echo form_submit(['value'=>'Create', 'class' => 'btn btn-success']);?>
+  
   </form>
   
   <br>
     </div>
     <form>
+    <?php echo form_close(); ?>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
