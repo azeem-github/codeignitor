@@ -36,15 +36,16 @@
     ?>
   
     <form action="" method="POST"> 
+    <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
   <label for="Username">Username:</label><br>
   <input type="text" class="form-control" name="username"><br><br>
-  <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
+  
   <label for="Email">Email:</label><br>
   <input type="text" class="form-control"  name="email"><br><br>
-  <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
+  
   <label for="Password">Password:</label><br>
   <input type="text" class="form-control"  name="password"><br><br>
-  <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
+
 
 
   <button class="btn btn-primary" name="register"> Register</button>
