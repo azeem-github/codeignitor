@@ -98,7 +98,8 @@ body {
 
    <hr>
 
-<a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/create"> Create Ticket </a>
+<?php echo anchor('auth/create','Create Ticket', ['name'=>'Create ticket', 'class'=>'btn btn-primary']);?>
+<!-- <a class="btn btn-primary" href="<?php //echo base_url(); ?>index.php/user/create"> Create Ticket </a> -->
 <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/view"> View Open Ticket </a>
 <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/closed"> View Closed Ticket </a>
 <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/resolved"> View Resolved Ticket </a>
