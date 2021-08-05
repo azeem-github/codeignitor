@@ -156,7 +156,7 @@ body {
     <td><?php echo $data['date'];?></td>
     <td>
     <button onclick="location.href='<?php echo base_url();?>register/index'">View</button>
-    <button onclick="location.href='<?php echo base_url();?>register/index'">Edit</button>
+    <button onclick="location.href='<?php echo base_url();?>auth/create'">Edit</button>
 </td>
     </tr>
 

@@ -115,6 +115,56 @@ $this->load->view('register');
    }
 $this->load->view('create');
 }
+public function update($id){
+	$this->load->model('queries');
+	$post = $this->queries->getSinglePosts($id);
+	$this->load->view('update', ['post'=>$post]);
+}
+
+	public function save()
+	{
+$this->form_validation->set_rules('title', 'Title', 'required');
+$this->form_validation->set_rules('email', 'Email', 'required');
+$this->form_validation->set_rules('category', 'Category', 'required');
+$this->form_validation->set_rules('priority', 'Priority', 'required');
+$this->form_validation->set_rules('status', 'Status', 'required');
+$this->form_validation->set_rules('msgs', 'Msgs', 'required');
+
+		if($this->form_validation->run())
+		{
+    $data = $this->input->post();
+	 $today = date('Y-m-d');
+	 $data['date_created'] = $today;
+	unset($data['submit']);
+	$this->load->model('queries');
+	if($this->queries->addPost()){
+		$this->session->set_flashdata('msg','Ticket Saved Succesfully');
+	}
+	else{
+		$this->session->set_flashdata('msg','Failed to save ticket');
+	}
+	return redirect('tickets');
+	}
+		else
+		{	
+			$this->load->view('create');
+		}
+	}
+	public function change(){
+		$this->form_validation->set_rules('title','Title' ,'required');
+		$this->form_validation->set_rules('email', 'Email', 'required');
+      $this->form_validation->set_rules('category', 'Category', 'required');
+      $this->form_validation->set_rules('priority', 'Priority', 'required');
+      $this->form_validation->set_rules('status', 'Status', 'required');
+      $this->form_validation->set_rules('msgs', 'Msgs', 'required');
+      
+		if($this->form_validation->run())
+		{
+			$data = $this->input->post();
+			$today = date('Y-m-d');
+		}
+	}
+}
 // public function save()
 // {
    
@@ -141,6 +191,5 @@ $this->load->view('create');
 //        }
 // }
 //    }
-}
 
 ?>

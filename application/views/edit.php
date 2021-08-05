@@ -1,63 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-    <title>Login Page!</title>
+<div class="container">
+<form class="form-horizontal">
+<?php //echo form_open('welcome/change', ['class'=>'form-horizontal']); ?> 
+<form>
+  <fieldset>
+  <legend> Update Post</legend>
 
-    <!-- Bootstrap -->
-    <link href="<?php echo base_url(); ?>assets/css/boostrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <div class="form-group row"></div>
+    <div class="form-group">
+      <label class="col-md-2 control-label">Title</label>
+      <div class="col-md-5">
+     
+      <?php echo form_input(['name'=>'title', 'placeholder'=>'Title', 'class'=>'form-control', 'value'=>set_value('title',$post->title)]);?>
+      </div>
+      <div class="col-md-5">
+      <?php echo form_error('title', '<div class="text="danger">', '</div>');?>
+    </div>
 
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-   
-  </head>
-  <body>
-
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-
-  <div class="navbar-header">
-  <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-    </ul>
-  </div>
-</nav> 
-  <div class="col-lg-5 col-lg-offset-1">
-    <h1>Edit Ticket:</h1>
-
-   <p>Fill to proceed to dashboard</p>
-    <?php if(isset($_SESSION['success'])) { ?>
+    <div class="form-group">
+      <label for="textArea" class="col-md-2 control-label">Description</label>
+      <div class="col-md-5">
     
-    <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
-    <?php } 
-    ?>
-    <?php echo validation_errors('<div class="alert alert-danger">','</div>');?>
-    <form action="" method="POST"> 
-  <label for="Email">Email:</label><br>
-  <input type="text" class="form-control" name="email"><br><br>
-  <label for="Password">Password:</label><br>
-  <input type="text" class="form-control" name="password"><br><br>
-    <button class="btn btn-primary" name="login"> Reset</button>
-  </form>
-  <br>
-  <p>Not Registered Yet..?<a href="register">  Registration </a></p>
-  
+      <?php echo form_textarea(['name'=>'description', 'placeholder'=>'Description', 'class'=>'form-control',
+      'value'=>set_value('description',$post->description)]);?>
+      </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
-    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
-  </body>
-</html>
+      <div class="col-md-5">
+      <?php echo form_error('description', '<div class="text-danger">', '</div>');?>
+      </div>
+   </div>
+    <br>
+<div class="form-group">
+<div class="col-md-10 col-md-offset-2">
+    <?php echo form_submit(['name'=>'submit', 'value'=>'Update', 'class'=>'btn btn-primary']); ?>
+    <?php echo anchor('welcome', 'Back', ['class'=>'btn btn-warning']);?>
+        </div>
+    </div>
+  </fieldset>
+<?php echo form_close(); ?>
+</div>

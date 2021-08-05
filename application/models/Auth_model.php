@@ -2,17 +2,17 @@
 
 class Auth_model extends CI_Model
 {
-   public function __construct()
+   public function checUserExist()
    {
       parent::__construct()
       
    }
    public function checUserExist()
        {
-          $checUser =  $this->db->where(['users' => 'email'])
-          ->get('users');
+          $checUser =  $this->db->where('users' => 'email');
+      
           if($checUser->num_rows() > 0){
-             return $checUser->num_rows();
+             return $checUser->result();
 
           }
          }

@@ -21,6 +21,8 @@
   </head>
   <body>
   <?php //echo form_open('user/tickets', ['class'=>'form->horizontal']); ?>
+
+  
   <nav class="navbar navbar-expand-md bg-dark navbar-dark">
 <div class="navbar-header">
 <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
@@ -48,6 +50,7 @@
 <span style ="color:red"><?php echo form_error('email'); ?></span>
 
 <h5>Category</h5>
+
 <input type="text" name="category" value="<?php echo set_value('category'); ?>" size="50" />
 <span style ="color:red"><?php echo form_error('category'); ?></span>
 
@@ -60,7 +63,7 @@
 <span style ="color:red"><?php echo form_error('status'); ?></span>
 
 <h5>Msgs :</h5>
-<input type="text" name="msgs" value="<?php echo set_value('msgs'); ?>" size="50" />
+<textarea type="textbox" name="msgs" value="<?php echo set_value('msgs'); ?>" rows="5" cols="30"/></textarea>
 <span style ="color:red"><?php echo form_error('msgs'); ?></span>
 
   <!-- <label for="Title">Title:</label><br>
@@ -86,9 +89,8 @@
   <label for="Msgs">Msgs:</label><br>
   <textarea class="form-group" name="msgs" rows="3"></textarea> 
   <?php //echo validation_errors('<div class="alert alert-danger">','</div>'); ?> -->
+<br>
 
-<br>
-<br>
 <?php echo anchor('user/tickets', 'Back', ['class' =>'btn btn-warning']); ?>
 
    <?php echo form_submit(['name'=>'create', 'value'=>'Create', 'class' => 'btn btn-success']);?>
