@@ -53,6 +53,7 @@ body {
   .sidenav {padding-top: 20px;}
   .sidenav a {font-size: 18px;}
 }
+
 </style>
 </head>
 
@@ -93,53 +94,61 @@ body {
     </ul>
   </div>
 </div>
+</div> 
+
+<br>
+<br>
+ <h1>Dashboard</h1>
+ </div>
+
+    <section class="dashboard-header" style="margin-top: 2em;">
+        <div class="box">
+                <div class="col-lg-3">
+                    <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
+                            <h3>All Tickets</h3>
+</div>
+</div>
 </div>
 
-    <!-- Dashboard counts
-    <section class="dashboard-header no-padding-bottom col-left-no-padding" style="margin-top: 4em;">
-        <div class="container">
-            <div class="row">
-                 Statistics 
+
                 <div class="col-md-3">
                     <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
-                        <div><i class="fa fa-tasks"></i></div>
-                  
-                            <small>All Tickets</small>
-                        </div>
+                    <!-- <h1><bold>5</bold></h1><br> -->
+                    <br>
+                        <div><i class="fas fa-ticket-alt" style="font-size:36px;"></i>
+                           
+                            <h3>Total Tickets</h3>
+                           
+                      </div>
                     </div>
+                </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
-                        <div><i class="fa fa-ticket"></i></div>
-                   
-                            <small>Open Tickets</small>
+                    <div><i class="fas fa-clock" style="font-size:36px;"></i>                       
+                    <h3>Open Tickets</h3>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
-                        <div><i class="fa fa-user"></i></div>
-                      
-                            <small>Assigned Tickets</small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3">
-                    <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
-                        <div><i class="fa fa-check"></i></div>
-                        
-                            <small>Closed Tickets</small>
-                        </div>
+                        <div><i class="fas fa-check" style="font-size:36px;"></i>
+                            <h3>Closed Tickets</h3
+                    
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-    </section> -->
+    </section> 
 <br>
-  <div class="col-lg-5 col-lg-offset-2">
+<div class="col-lg-5 col-lg-offset-2">
+
+ 
+  
     <h3><b>Dashboard</b></h3>
 
    
@@ -170,7 +179,7 @@ body {
 ?>
 
 <h3> Open tickets </h3>
-<hr>
+
 
 <div class="container">
   <table class="table-dark">
@@ -208,8 +217,6 @@ body {
     <button onclick="location.href='<?php echo base_url();?>register/index'">Edit</button>
 </td>
     </tr>
-
-    
     <?php
     }
      ?>

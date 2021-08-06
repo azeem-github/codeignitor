@@ -21,26 +21,19 @@
   </head>
   <body>
   <?php //echo form_open('user/tickets', ['class'=>'form->horizontal']); ?>
-
-  
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 <div class="navbar-header">
 <a style="color:white" class="navbar-brand"><h1>Ticketing System</a></h1>
-  <br>
 </nav>
   <div class="col-lg-5 col-lg-offset-1">
     <h2>Create Ticket</h2>
 
-    <hr>
     <?php if(isset($_SESSION['success'])) { ?>
     
     <div class="alert alert-success"> <?php echo $_SESSION['success']; ?></div>
     <?php } 
     ?>
-  
     <form action="" method="POST"> 
-
-
     <h5>Title</h5>
 <input type="text" name="title" value="<?php echo set_value('title'); ?>" size="50" />
 <span style ="color:red"><?php echo form_error('title'); ?></span>
@@ -65,35 +58,11 @@
 <h5>Msgs :</h5>
 <textarea type="textbox" name="msgs" value="<?php echo set_value('msgs'); ?>" rows="5" cols="30"/></textarea>
 <span style ="color:red"><?php echo form_error('msgs'); ?></span>
-
-  <!-- <label for="Title">Title:</label><br>
-  <input type="text"  name="title"><br>
-  <?php //echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
-
-  <label for="Email">Email:</label><br>
-  <input type="text"  name="email"><br>
-  <?php //echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
-
-  <label for="Category">Category:</label><br>
-  <input type="text"   name="category"><br>
-  <?php //echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
-
-  <label for="Priority">Priority:</label><br>
-  <input type="text"  name="priority"><br>
-  <?php// echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
-
-  <label for="Status">Status:</label><br>
-  <input type="text"  name="status"><br>
-  <?php //echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
-
-  <label for="Msgs">Msgs:</label><br>
-  <textarea class="form-group" name="msgs" rows="3"></textarea> 
-  <?php //echo validation_errors('<div class="alert alert-danger">','</div>'); ?> -->
 <br>
 
-<?php echo anchor('user/tickets', 'Back', ['class' =>'btn btn-warning']); ?>
+<?php echo anchor('user/tickets', 'Back', ['class' =>'btn btn-default']); ?>
 
-   <?php echo form_submit(['name'=>'create', 'value'=>'Create', 'class' => 'btn btn-success']);?>
+   <?php echo form_submit(['name'=>'create', 'value'=>'Create', 'class' => 'btn btn-primary']);?>
   
   </form>
   

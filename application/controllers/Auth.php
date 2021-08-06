@@ -164,32 +164,31 @@ $this->form_validation->set_rules('msgs', 'Msgs', 'required');
 			$today = date('Y-m-d');
 		}
 	}
-}
-// public function save()
-// {
-   
-// }
-
-//    public function account()
-//    {
-//       if(isset($_POST['account'])){
-//          $this->form_validation->set_rules('title', 'Title', 'required');
-//          $this->form_validation->set_rules('email', 'Email', 'required');
-//          $this->form_validation->set_rules('role', 'Role', 'required');
-//       if($this->form_validation->run() == TRUE){
-
-//          echo "form validated";
-//          $data = array(
-//             'name'=>$_POST ['name'],
-//             'email'=>$_POST ['email'],
-//             'role'=>$_POST ['role']);
-         
-//          $this->db->insert('accounts', $data);
-//          $this->session->set_flashdata("success", "Your account has been registered. You can Login now");
-//          redirect("view/accounts", "refresh");
+public function c_account()
+{
+   if(isset($_POST['create'])){
+      $this->form_validation->set_rules('name', 'Name', 'required');
+      $this->form_validation->set_rules('email', 'Email', 'required');
+      $this->form_validation->set_rules('role', 'Role', 'required');
   
-//        }
-// }
-//    }
+   if($this->form_validation->run() == TRUE){
+
+      echo "form validated";
+      $data = array(
+         'name'=> $_POST ['name'],
+         'email'=> $_POST ['email'],
+         'role'=> $_POST ['role']);
+      
+      $this->db->insert('accounts', $data);
+      $this->session->set_flashdata("success");
+      redirect("auth/c_account", "refresh");
+
+    }
+    
+   
+}
+$this->load->view('c_account');
+}
+   }
 
 ?>

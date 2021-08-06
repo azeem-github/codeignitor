@@ -98,7 +98,9 @@ body {
 
    <hr>
 
-   <a class="btn btn-primary" href="<?php echo base_url(); ?>index.php/user/create_account"> Create Account </a><br> <br>
+   <?php echo anchor('auth/c_account','Create Account', ['name'=>'Create account', 'class'=>'btn btn-primary']);?>
+
+   <!-- <a class="btn btn-primary" href="<?php //echo base_url(); ?>index.php/user/create_account"> Create Account </a><br> <br> -->
 
   <title>Profile</title>
   <meta charset="utf-8">
@@ -139,17 +141,14 @@ body {
     ?>
     <tr>
     <td><?php echo $data['id'];?></td>
-    <td><?php echo $data['username'];?></td>
+    <td><?php echo $data['name'];?></td>
     <td><?php echo $data['email'];?></td>
     <td><?php echo $data['role'];?></td>
-   
- 
     <td>
+    <button onclick="location.href='<?php echo base_url();?>register/index'">View</button>
     <button onclick="location.href='<?php echo base_url();?>register/index'">Edit</button>
 </td>
     </tr>
-
-    
     <?php
     }
      ?>
@@ -157,8 +156,6 @@ body {
   </table>
 </div>
 </body>
-
-
     <br><br>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
