@@ -181,6 +181,7 @@ public function c_account()
       
       $this->db->insert('accounts', $data);
       $this->session->set_flashdata("success");
+      //redirect("auth/c_account", "refresh");
       redirect("auth/c_account", "refresh");
 
     }

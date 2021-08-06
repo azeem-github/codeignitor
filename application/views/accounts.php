@@ -97,7 +97,8 @@ body {
     <h3><b>Accounts</b></h3>
 
    <hr>
-
+   <!-- <div class="col-lg-5 col-lg-offset-2"> -->
+    <!-- <h3><b>Accounts</b></h3> -->
    <?php echo anchor('auth/c_account','Create Account', ['name'=>'Create account', 'class'=>'btn btn-primary']);?>
 
    <!-- <a class="btn btn-primary" href="<?php //echo base_url(); ?>index.php/user/create_account"> Create Account </a><br> <br> -->

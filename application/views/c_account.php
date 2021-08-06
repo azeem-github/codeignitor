@@ -39,7 +39,6 @@
     ?>
   
     <form action="" method="POST"> 
-
     <h5>Name</h5>
 <input type="text" name="name" value="<?php echo set_value('name'); ?>" size="50" />
 <span style ="color:red"><?php echo form_error('name'); ?></span>

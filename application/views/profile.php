@@ -137,7 +137,7 @@ body {
                     <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
                         <div><i class="fas fa-check" style="font-size:36px;"></i>
                             <h3>Closed Tickets</h3
-                    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,8 +146,8 @@ body {
     </section> 
 <br>
 <div class="col-lg-5 col-lg-offset-2">
-
- 
+<hr>
+<!-- <div class="col-lg-5 col-lg-offset-2"> -->
   
     <h3><b>Dashboard</b></h3>
 
@@ -179,7 +179,7 @@ body {
 ?>
 
 <h3> Open tickets </h3>
-
+<hr>
 
 <div class="container">
   <table class="table-dark">
