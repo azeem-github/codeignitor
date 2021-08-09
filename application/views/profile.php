@@ -65,7 +65,7 @@ body {
     <ul class="navbar-nav">
     
   <li class="nav-item">
-        <a class="nav-link" href="profile"><i class="fa fa-tachometer-alt"></i> Dashboard </a>
+        <a class="nav-link" href="profile"><i class="fa fa-tachometer-alt"></i> Dashboard</a>
       </li>
 
       <li class="nav-item">
@@ -113,11 +113,11 @@ body {
 
                 <div class="col-md-3">
                     <div class="statistic d-flex align-items-center bg-white has-shadow custom-border-radius">
-                    <!-- <h1><bold>5</bold></h1><br> -->
+                    
                     <br>
-                        <div><i class="fas fa-ticket-alt" style="font-size:36px;"></i>
-                           
+                   <div><i class="fas fa-ticket-alt" style="font-size:36px;"></i>
                             <h3>Total Tickets</h3>
+                            <h1><?php echo $this->db->count_all_results('tickets'); ?> </h1>
                            
                       </div>
                     </div>

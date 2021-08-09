@@ -11,6 +11,15 @@ class Auth_model extends CI_Model
 
           }
          }
-}
+         $ticketsDetail = $this->common->getWhere('msgs', 'date', $allDate);
+         $total = count($attendanceDetail);
+         if($total >0 )
+         {
+            echo "record found";
+         }
+         else{
+             echo "Not Found";
+          }
+      }
 
 ?>
